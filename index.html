@@ -15,9 +15,9 @@
     <link rel="stylesheet" href="DarkModeStyles.css">
 </head>
 
-<body>
+<body onload="heroSectionHeight()">
 
-    <nav class="navbar navbar-expand-sm">
+    <nav class="navbar navbar-expand-sm" id="navbar">
         <div class="container">
             <a class="navbar-brand logo" href="index.html">
                 <img src="Images/Logo.png" alt="Logo Taskly">
@@ -41,18 +41,13 @@
         </div>
     </nav>
 
-    <main>
-        <section class="hero-section d-flex flex-column justify-content-center align-items-center text-center">
-            <div class="container">
-                <h1 class="hero-title">Organize Your Tasks Efficiently with TASKLY</h1>
-                <p class="hero-subtitle">Boost your productivity and manage your time effectively with our  user-friendly task management app.</p>
-                <button onclick="window.open('Login.html', '_self')" class="getStartedBtn">Get Started</button>
-            </div>
-        </section>
-    </main>
-
-    
-
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="hero-title">Organize Your Tasks Efficiently with TASKLY</h1>
+            <p class="hero-subtitle">Boost your productivity and manage your time effectively with our  user-friendly task management app.</p>
+            <button onclick="window.open('Login.html', '_self')" class="getStartedBtn">Get Started</button>
+        </div>
+    </section>
 
 
     <script src="Javascript/Scripts.js"></script>
