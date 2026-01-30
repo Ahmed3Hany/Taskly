@@ -3,8 +3,8 @@
     --LightColor2: #22b59a;
     --LightColor3: #68b531;
     --DarkColor1: #275750;
-    --DarkColor2: #0f7c6a;
-    --DarkColor3: #3e8828;
+    --DarkColor2: #088873;
+    --DarkColor3: #31741d;
     --OffWhite: #e4e4e4;
     --DarkOffWhite: #c4c4c4;
     --LightLogoSpan: linear-gradient(60deg, var(--LightColor1), var(--LightColor2), var(--LightColor3), var(--LightColor2), var(--LightColor1));
@@ -14,16 +14,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: 0.6s;
 }
 
 body {
-    --bg1: #22b59a;
-    --bg2: #b0cfc8;
-    --bg3: #68b531;
-    background: linear-gradient(60deg, var(--bg1), var(--bg2), var(--bg3));
+    background: linear-gradient(60deg, var(--LightColor2), var(--LightColor1), var(--LightColor3));
     background-repeat: no-repeat;
     background-attachment: fixed;
-    transition: --bg1 2s, --bg2 2s, --bg3 2s;
 }
 
 /* Navbar */
@@ -42,7 +40,6 @@ body {
     padding: 15px 25px;
     position: relative;
     box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.2);
-    transition: 0.6s;
 }
 
 .navbar .container::before,
@@ -56,7 +53,6 @@ body {
     border-radius: 20px;
     z-index: -1;
     background-color: rgba(255, 255, 255, 0.1);
-    transition: 0.6s;
 }
 
 .navbar .logo {
@@ -74,7 +70,6 @@ body {
     height: 70px;
     border-radius: 15px;
     filter: drop-shadow(7px 7px 5px var(--LightColor2)) drop-shadow(-7px -7px 5px var(--LightColor3));
-    transition: 0.6s;
 }
 
 .navbar .logo:hover img {
@@ -91,7 +86,6 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     animation: logoBG 5s linear infinite;
-    transition: 0.6s;
 }
 
 .navbar .logo:hover span {
@@ -121,13 +115,8 @@ body {
     }
 }
 
-.mode-icon {
-    transition: 0.6s;
-}
-
 .loginBtn {
     border: none;
-    transition: 0.6s;
     background-color: transparent;
     text-decoration: none;
 }
@@ -142,7 +131,6 @@ body {
     border-radius: 15px;
     padding: 15px;
     cursor: pointer;
-    transition: 0.6s;
 }
 
 .mode-icon::before {
@@ -169,14 +157,12 @@ body {
     font-size: clamp(2rem, 5vw, 3.5rem);
     color: var(--DarkColor1);
     margin-bottom: 1rem;
-    transition: 0.6s;
 }
 
 .hero-subtitle {
     font-size: clamp(1rem, 3vw, 1.5rem);
     color: var(--DarkColor1);
     margin-bottom: 2rem;
-    transition: 0.6s;
 }
 
 .getStartedBtn {
@@ -187,8 +173,6 @@ body {
     font-weight: bold;
     color: var(--DarkColor1);
     border: none;
-    cursor: pointer;
-    transition: 0.6s;
 }
 
 .getStartedBtn:hover {
@@ -198,29 +182,28 @@ body {
 /* Data Forms */
 
 .dataForms {
-    background-color: transparent; 
+    background-color: transparent;
     border-radius: 20px;
     padding: clamp(1.5rem, 5vw, 5rem) clamp(1.25rem, 5vw, 2rem);
     box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.2);
-    transition: 0.6s;
     position: relative;
 }
 
-.dataForms h1{
+.dataForms h1 {
     font-size: clamp(2.25rem, 3vw, 3rem);
     color: var(--DarkColor1);
     font-weight: bold;
     text-align: center;
 }
 
-.dataForms p{
+.dataForms p {
     color: var(--DarkColor1);
     opacity: 0.8;
-    font-size: 20px;
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
     text-align: center;
 }
 
-.dataForms .social-links{
+.dataForms .social-links {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -228,23 +211,28 @@ body {
     gap: clamp(1.5rem, 3vw, 2rem);
 }
 
-.dataForms .social-links a{
+.dataForms .social-links a {
     font-size: clamp(1rem, 5vw, 1.5rem);
     color: var(--DarkColor1);
-    transition: 0.6s;
     border: 1px solid var(--DarkColor1);
     padding: 10px 1rem;
     border-radius: 100%;
 }
 
-.dataForms > div{
+.dataForms .social-links a:hover {
+    background-color: var(--DarkColor1);
+    color: var(--OffWhite);
+    transform: scale(1.2);
+}
+
+.dataForms>div {
     padding-inline: clamp(1.5rem, 3vw, 3rem);
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.dataForms form{
+.dataForms form {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -253,7 +241,7 @@ body {
     gap: 1.5rem;
 }
 
-.dataForms form > div{
+.dataForms form>div {
     width: 100%;
     min-height: 51px;
     display: flex;
@@ -261,7 +249,12 @@ body {
     align-items: center;
 }
 
-.dataForms form .form-control{
+.dataForms form input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.dataForms form .form-control {
     border: none;
     border-bottom: 1px solid var(--DarkColor1);
     padding: 10px;
@@ -269,41 +262,77 @@ body {
     font-size: 1.25rem;
     color: var(--DarkColor1);
 }
-.dataForms form .form-control::placeholder{
+
+.dataForms form .form-control::placeholder {
     color: var(--DarkColor1);
     opacity: 0.8;
 }
-.dataForms form .form-control:focus{
+
+.dataForms form .form-control:focus {
     background-color: transparent;
 }
 
-.dataForms form .f-pass-btn{
-    color: var(--DarkColor1);
-    text-decoration: none;
-    font-size: 20px;
+.dataForms form div:has(.form-switch) {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
 }
 
-.dataForms .submitBtn{
+.dataForms form .form-switch .form-check-input {
+    background-color: var(--LightColor2);
+    border-color: var(--LightColor2);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e") !important;
+}
+
+.dataForms form .form-switch .form-check-input:focus {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e") !important;
+}
+
+.dataForms form .form-switch .form-check-input:checked {
+    background-color: var(--DarkColor1);
+    border-color: var(--DarkColor1);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e") !important;
+}
+
+.dataForms form div:has(.form-switch) label {
+    font-size: clamp(0.9rem, 5vw, 1.1rem);
+    color: var(--DarkColor1);
+}
+
+.dataForms form .f-pass-btn {
+    color: var(--DarkColor1);
+    text-decoration: none;
+    font-size: clamp(0.9rem, 5vw, 1.1rem);
+}
+
+.dataForms form .f-pass-btn:hover {
+    text-decoration: underline;
+}
+
+.dataForms .submitBtn {
     color: var(--DarkColor1);
     border: none;
-    border-radius:50px;
+    border-radius: 50px;
     padding: 15px 70px;
     font-size: clamp(1rem, 3vw, 1.5rem);
     font-weight: bold;
-    transition: 0.6s;
 }
 
-.dataForms .submitBtn[value="SignIN"]{
+.dataForms .submitBtn[value="SignIN"] {
     background: linear-gradient(60deg, var(--LightColor2), var(--LightColor1));
 }
-.dataForms .submitBtn[value="SignUP"]{
+
+.dataForms .submitBtn[value="SignUP"] {
     background: linear-gradient(60deg, var(--LightColor1), var(--LightColor3));
 }
-.dataForms .submitBtn:hover{
+
+.dataForms .submitBtn:hover {
     transform: scale(1.2);
 }
 
-.dataForms .overlay{
+.dataForms .overlay {
     position: absolute;
     border-radius: 20px;
     top: 0;
@@ -317,5 +346,4 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: 0.6s;
 }
