@@ -180,7 +180,7 @@ body {
 }
 
 .getStartedBtn {
-    background-color: var(--LightColor2);
+    background: linear-gradient(60deg, var(--LightColor2), var(--LightColor1), var(--LightColor3));
     border-radius: 20px;
     padding: 15px 30px;
     font-size: clamp(1.2rem, 3vw, 1.5rem);

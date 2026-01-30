@@ -60,9 +60,9 @@ function toggleDataForms(){
     }
 }
 
-function adjustDataFormsOnResize(){
-    if(isLoginVisible == true){
-        console.log('resize detected');
-        overlay.style.right = `${overlay.offsetWidth}px`;
-    }
-}
+// function adjustDataFormsOnResize(){
+//     if(isLoginVisible == true){
+//         console.log('resize detected');
+//         overlay.style.right = `${overlay.offsetWidth}px`;
+//     }
+// }
