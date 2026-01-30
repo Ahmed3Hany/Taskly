@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="DarkModeStyles.css">
 </head>
 
-<body onload="heroSectionHeight(); dataFormsStartup();" onresize="dataFormsStartup();">
+<body onload="heroSectionHeight(); dataFormsStartup();" onresize="heroSectionHeight(); dataFormsStartup();">
 
     <nav class="navbar navbar-expand-sm" id="navbar">
         <div class="container">
@@ -34,7 +34,7 @@
                         <label for="Mode" class="mode-icon"></label>
                     </div>
                     <div>
-                        <button onclick="window.open('Login.html')"  class="loginBtn"></button>
+                        <button onclick="window.open('Login.html', '_self')" class="loginBtn"></button>
                     </div>
                 </div>
             </div>
@@ -44,14 +44,14 @@
     <section class="hero-section">
         <div class="container dataForms row">
 
-            <div class="login col-md-6 my-md-0 mb-3" id="login">
+            <div class="login col-md-6" id="login">
                 <h1>Sign In</h1>
                 <div class="social-links">
                     <a href="#"><i class="bi bi-facebook"></i></a>
                     <a href="#"><i class="bi bi-google"></i></a>
                     <a href="#"><i class="bi bi-linkedin"></i></a>
                 </div>
-                <p>or use you account</p>
+                <p>or use your account</p>
                 <form action="" id="loginForm">
                     <div>
                         <input type="text" name="username" id="username" placeholder="Username" class="form-control" required>
@@ -59,16 +59,16 @@
                     <div>
                         <input type="password" name="password" id="password" placeholder="Password" class="form-control" required>
                     </div>
-                    <div>
+                    <div class="d-flex justify-content-center align-items-center">
                         <a href="#" class="f-pass-btn">Forgot Password?</a>
                     </div>
                     <div>
-                        <input class="submitBtn btn btn-primary" type="submit" value="Sign In">
+                        <button class="submitBtn" type="submit" value="SignIn">Sign IN</button>
                     </div>
                 </form>
             </div>
 
-            <div class="register col-md-6 my-md-0 mb-3" id="register">   
+            <div class="register col-md-6" id="register">   
                 <h1>Create Account</h1>
                 <div class="social-links">
                     <a href="#"><i class="bi bi-facebook"></i></a>
@@ -84,10 +84,10 @@
                         <input type="email" name="email" id="email" placeholder="Email" class="form-control" required>
                     </div>
                     <div>
-                        <input type="password" name="password" id="password" placeholder="Password" class="form-control" minlength="8" required>
+                        <input type="password" name="newpassword" id="newpassword" placeholder="Password" class="form-control" minlength="8" required>
                     </div>
                     <div>
-                        <input class="submitBtn btn btn-primary" type="submit" value="Sign Up">
+                        <button class="submitBtn" type="submit" value="SignUp">Sign UP</button>
                     </div>
                 </form>
             </div>

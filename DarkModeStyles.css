@@ -4,40 +4,69 @@ body:has(#Mode:checked) {
     --bg3: #2e5f1f;
 }
 
-body:has(#Mode:checked) .navbar .container{
-    box-shadow: 0px 10px 10px var(--DarkColor1);
-}
-
 body:has(#Mode:checked) .navbar .container::before{
-    background-color: rgba(148, 148, 148, 0.4);
+    background-color: rgba(184, 184, 184, 0.2);
 }
 
-body:has(#Mode:checked) .navbar .logo span{
-    color: #e4e4e4;
+body:has(#Mode:checked) .navbar .logo span,
+body:has(#Mode:checked) .hero-title,
+body:has(#Mode:checked) .dataForms h1,
+body:has(#Mode:checked) .dataForms p,
+body:has(#Mode:checked) .dataForms a
+{
+    color: var(--OffWhite);
 }
 
 body:has(#Mode:checked) .mode-icon::before {
     content: "\F495";
     background-color: var(--DarkColor1);
-    color: #e4e4e4;
-    text-shadow: 0px 0px 10px #e4e4e4;
+    color: var(--OffWhite);
+    text-shadow: 0px 0px 10px var(--OffWhite);
 }
 
 body:has(#Mode:checked) .loginBtn::before{
     background-color: var(--DarkColor1);
-    color: #e4e4e4;
-    text-shadow: 0px 0px 10px #e4e4e4;
+    color: var(--OffWhite);
+    text-shadow: 0px 0px 10px var(--OffWhite);
 }
 
-body:has(#Mode:checked) .hero-title {
-    color: #e4e4e4;
-}
 
 body:has(#Mode:checked) .hero-subtitle {
-    color: #c4c4c4;
+    color: var(--DarkOffWhite);
 }
 
 body:has(#Mode:checked) .getStartedBtn {
+    background: linear-gradient(45deg, var(--DarkColor1), var(--DarkColor2), var(--DarkColor3));
+    color: var(--OffWhite);
+}
+
+/* Data Forms */
+body:has(#Mode:checked) .dataForms::before{
+    background-color: rgba(184, 184, 184, 0.1);
+}
+
+body:has(#Mode:checked) .dataForms .social-links a{
+    border: 1px solid var(--OffWhite);
+}
+
+body:has(#Mode:checked) .dataForms .form-control {
+    color: var(--OffWhite);
+    border-bottom: 1px solid var(--OffWhite);
+}
+
+body:has(#Mode:checked) .dataForms .form-control::placeholder {
+    color: var(--DarkOffWhite);
+}
+
+body:has(#Mode:checked) .dataForms .submitBtn {
     background-color: var(--DarkColor1);
-    color: #e4e4e4;
+    color: var(--OffWhite);
+}
+
+body:has(#Mode:checked) .dataForms form .submitBtn[value="SignIn"]{
+    background: linear-gradient(45deg, var(--DarkColor1), var(--DarkColor2));
+}
+
+body:has(#Mode:checked) .dataForms form .submitBtn[value="SignUp"]{
+    background: linear-gradient(45deg, var(--DarkColor2), var(--DarkColor3));
 }

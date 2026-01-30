@@ -3,7 +3,14 @@ function heroSectionHeight() {
     const nav = document.getElementById('navbar');
     const navHeight = nav.offsetHeight;
     const heroSection = document.querySelector('.hero-section');
-    heroSection.style.height = `calc(100vh - ${navHeight}px)`;
+    console.log(navHeight);
+
+    if(window.innerHeight >= 700){
+        heroSection.style.height = `calc(100vh - ${navHeight}px)`;
+    }
+    else{
+        heroSection.style.height = `100vh`;
+    }
 }
 
 // Dark Mode Toggle with State Persistence

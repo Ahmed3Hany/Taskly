@@ -2,9 +2,11 @@
     --LightColor1: #b0cfc8;
     --LightColor2: #22b59a;
     --LightColor3: #68b531;
-    --DarkColor1: #1f3a36;
-    --DarkColor2: #0f6b5c;
-    --DarkColor3: #2e5f1f;
+    --DarkColor1: #275750;
+    --DarkColor2: #0f7c6a;
+    --DarkColor3: #3e8828;
+    --OffWhite: #e4e4e4;
+    --DarkOffWhite: #c4c4c4;
     --LightLogoSpan: linear-gradient(to right, var(--LightColor1), var(--LightColor2), var(--LightColor3), var(--LightColor2), var(--LightColor1));
 }
 
@@ -20,6 +22,8 @@ body {
     --bg3: #68b531;
     min-height: 100vh;
     background: linear-gradient(60deg, var(--bg1), var(--bg2), var(--bg3));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     transition: --bg1 2s, --bg2 2s, --bg3 2s;
 }
 
@@ -29,6 +33,8 @@ body {
     font-weight: bold;
     position: sticky;
     top: 0px;
+    z-index: 999;
+    margin-bottom: 15px;
 }
 
 .navbar .container {
@@ -36,11 +42,12 @@ body {
     border-radius: 20px;
     padding: 15px 25px;
     position: relative;
-    box-shadow: 0px 10px 10px var(--LightColor1);
+    box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.2);
     transition: 0.6s;
 }
 
-.navbar .container::before {
+.navbar .container::before,
+.dataForms::before {
     content: "";
     position: absolute;
     top: 0;
@@ -49,7 +56,8 @@ body {
     height: 100%;
     border-radius: 20px;
     z-index: -1;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: 0.6s;
 }
 
 .navbar .logo {
@@ -191,11 +199,12 @@ body {
 /* Data Forms */
 
 .dataForms {
+    background-color: transparent; 
     border-radius: 20px;
-    padding: clamp(3rem, 5vw, 5rem) 2rem;
-    background-color: rgba(255, 255, 255, 1);
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    padding: clamp(1.5rem, 5vw, 5rem) clamp(1.25rem, 5vw, 2rem);
+    box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.2);
     transition: 0.6s;
+    position: relative;
 }
 
 .dataForms h1{
@@ -208,6 +217,7 @@ body {
 .dataForms p{
     color: var(--DarkColor1);
     opacity: 0.8;
+    font-size: 18px;
     text-align: center;
 }
 
@@ -246,14 +256,49 @@ body {
 
 .dataForms form > div{
     width: 100%;
-    min-height: 45px;
+    min-height: 51px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.dataForms form input{
+.dataForms form .form-control{
     border: none;
     border-bottom: 1px solid var(--DarkColor1);
     padding: 10px;
+    background-color: transparent;
+    font-size: 1.25rem;
+    color: var(--DarkColor1);
+}
+.dataForms form .form-control::placeholder{
+    color: var(--DarkColor1);
+    opacity: 0.8;
+}
+.dataForms form .form-control:focus{
+    background-color: transparent;
+}
+
+.dataForms form .f-pass-btn{
+    color: var(--DarkColor1);
+    text-decoration: none;
+}
+
+.dataForms form .submitBtn{
+    color: var(--DarkColor1);
+    border: none;
+    border-radius:50px;
+    padding: 10px 30px;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-weight: bold;
+    transition: 0.6s;
+}
+
+.dataForms form .submitBtn[value="SignIn"]{
+    background: linear-gradient(45deg, var(--LightColor2), var(--LightColor1));
+}
+.dataForms form .submitBtn[value="SignUp"]{
+    background: linear-gradient(45deg, var(--LightColor1), var(--LightColor3));
+}
+.dataForms form .submitBtn:hover{
+    transform: scale(1.2);
 }
