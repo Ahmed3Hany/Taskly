@@ -7,7 +7,7 @@
     --DarkColor3: #3e8828;
     --OffWhite: #e4e4e4;
     --DarkOffWhite: #c4c4c4;
-    --LightLogoSpan: linear-gradient(to right, var(--LightColor1), var(--LightColor2), var(--LightColor3), var(--LightColor2), var(--LightColor1));
+    --LightLogoSpan: linear-gradient(60deg, var(--LightColor1), var(--LightColor2), var(--LightColor3), var(--LightColor2), var(--LightColor1));
 }
 
 * {
@@ -20,7 +20,6 @@ body {
     --bg1: #22b59a;
     --bg2: #b0cfc8;
     --bg3: #68b531;
-    min-height: 100vh;
     background: linear-gradient(60deg, var(--bg1), var(--bg2), var(--bg3));
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -56,7 +55,7 @@ body {
     height: 100%;
     border-radius: 20px;
     z-index: -1;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
     transition: 0.6s;
 }
 
@@ -217,7 +216,7 @@ body {
 .dataForms p{
     color: var(--DarkColor1);
     opacity: 0.8;
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -281,24 +280,42 @@ body {
 .dataForms form .f-pass-btn{
     color: var(--DarkColor1);
     text-decoration: none;
+    font-size: 20px;
 }
 
-.dataForms form .submitBtn{
+.dataForms .submitBtn{
     color: var(--DarkColor1);
     border: none;
     border-radius:50px;
-    padding: 10px 30px;
+    padding: 15px 70px;
     font-size: clamp(1rem, 3vw, 1.5rem);
     font-weight: bold;
     transition: 0.6s;
 }
 
-.dataForms form .submitBtn[value="SignIn"]{
-    background: linear-gradient(45deg, var(--LightColor2), var(--LightColor1));
+.dataForms .submitBtn[value="SignIN"]{
+    background: linear-gradient(60deg, var(--LightColor2), var(--LightColor1));
 }
-.dataForms form .submitBtn[value="SignUp"]{
-    background: linear-gradient(45deg, var(--LightColor1), var(--LightColor3));
+.dataForms .submitBtn[value="SignUP"]{
+    background: linear-gradient(60deg, var(--LightColor1), var(--LightColor3));
 }
-.dataForms form .submitBtn:hover{
+.dataForms .submitBtn:hover{
     transform: scale(1.2);
+}
+
+.dataForms .overlay{
+    position: absolute;
+    border-radius: 20px;
+    top: 0;
+    right: 0;
+    background: linear-gradient(60deg, var(--LightColor2), var(--LightColor1), var(--LightColor3));
+    background-size: 200%;
+    background-position: right;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.6s;
 }

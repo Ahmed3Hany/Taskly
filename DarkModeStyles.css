@@ -4,8 +4,9 @@ body:has(#Mode:checked) {
     --bg3: #2e5f1f;
 }
 
-body:has(#Mode:checked) .navbar .container::before{
-    background-color: rgba(184, 184, 184, 0.2);
+body:has(#Mode:checked) .navbar .container::before,
+body:has(#Mode:checked) .dataForms::before{
+    background-color: rgba(134, 134, 134, 0.1);
 }
 
 body:has(#Mode:checked) .navbar .logo span,
@@ -41,9 +42,6 @@ body:has(#Mode:checked) .getStartedBtn {
 }
 
 /* Data Forms */
-body:has(#Mode:checked) .dataForms::before{
-    background-color: rgba(184, 184, 184, 0.1);
-}
 
 body:has(#Mode:checked) .dataForms .social-links a{
     border: 1px solid var(--OffWhite);
@@ -63,10 +61,16 @@ body:has(#Mode:checked) .dataForms .submitBtn {
     color: var(--OffWhite);
 }
 
-body:has(#Mode:checked) .dataForms form .submitBtn[value="SignIn"]{
-    background: linear-gradient(45deg, var(--DarkColor1), var(--DarkColor2));
+body:has(#Mode:checked) .dataForms .submitBtn[value="SignIN"]{
+    background: linear-gradient(60deg, var(--DarkColor1),var(--DarkColor2));
 }
 
-body:has(#Mode:checked) .dataForms form .submitBtn[value="SignUp"]{
-    background: linear-gradient(45deg, var(--DarkColor2), var(--DarkColor3));
+body:has(#Mode:checked) .dataForms .submitBtn[value="SignUP"]{
+    background: linear-gradient(60deg, var(--DarkColor2), var(--DarkColor3));
+}
+
+body:has(#Mode:checked) .dataForms .overlay{
+    background: linear-gradient(60deg, var(--DarkColor1), var(--DarkColor2), var(--DarkColor3));
+    background-size: 200%;
+    background-position: right;
 }

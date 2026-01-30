@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="DarkModeStyles.css">
 </head>
 
-<body onload="heroSectionHeight(); dataFormsStartup();" onresize="heroSectionHeight(); dataFormsStartup();">
+<body onload="heroSectionHeight(); dataFormsStartup(); toggleDataForms();" onresize="heroSectionHeight(); dataFormsStartup(); adjustDataFormsOnResize();">
 
     <nav class="navbar navbar-expand-sm" id="navbar">
         <div class="container">
@@ -63,7 +63,7 @@
                         <a href="#" class="f-pass-btn">Forgot Password?</a>
                     </div>
                     <div>
-                        <button class="submitBtn" type="submit" value="SignIn">Sign IN</button>
+                        <button class="submitBtn" type="submit" value="SignIN">Sign IN</button>
                     </div>
                 </form>
             </div>
@@ -78,7 +78,11 @@
                 <p>or use you email for registration</p>
                 <form action="" id="registerForm">
                     <div>
-                        <input type="text" name="fname" id="fname" placeholder="Full Name" class="form-control w-100" required>
+                        <!-- <input type="text" name="fname" id="fname" placeholder="Full Name" class="form-control w-100" required> -->
+                        <div class="input-group">
+                            <input type="text" name="fname" id="fname" placeholder="First Name" aria-label="First name" class="form-control">
+                            <input type="text" name="lname" id="lname" placeholder="Last Name" aria-label="Last name" class="form-control">
+                        </div>
                     </div>
                     <div>
                         <input type="email" name="email" id="email" placeholder="Email" class="form-control" required>
@@ -87,11 +91,12 @@
                         <input type="password" name="newpassword" id="newpassword" placeholder="Password" class="form-control" minlength="8" required>
                     </div>
                     <div>
-                        <button class="submitBtn" type="submit" value="SignUp">Sign UP</button>
+                        <button class="submitBtn" type="submit" value="SignUP">Sign UP</button>
                     </div>
                 </form>
             </div>
 
+            <div class="overlay col-md-6" id="overlay"></div>
         </div>
     </section>
 
