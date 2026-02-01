@@ -1,0 +1,31 @@
+@media (max-width:767px) {
+    body{
+        background-size: 500% !important;
+    }
+    
+    .navbar .container {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .navbar .logo {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: 1.75rem;
+    }
+
+    .dataForms{
+        border-top-left-radius: 0px;
+    }
+
+    .dataForms .showSignUp{
+        display: flex;
+    }
+
+    .dataForms .overlay{
+        display: none;
+    }
+}
