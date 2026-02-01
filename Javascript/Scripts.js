@@ -33,13 +33,14 @@ function dataFormsStartup() {
     const loginForm = document.getElementById('login');
     const registerForm = document.getElementById('register');
     if (window.innerWidth < 768) {
-        registerForm.style.position = "absolute";
-        registerForm.style.top = `-${registerForm.offsetHeight + 20}px`;
-        registerForm.style.left = `0px`;
-        loginForm.style.position = "relative";
-        loginForm.style.top = `0px`;
-        showbtn.style.top = `-85px`;
-        signUpShown = false;
+        if(signUpShown === false){
+            registerForm.style.position = "absolute";
+            registerForm.style.top = `-${registerForm.offsetHeight + 20}px`;
+            registerForm.style.left = `0px`;
+            loginForm.style.position = "relative";
+            loginForm.style.top = `0px`;
+            showbtn.style.top = `-85px`;
+        }
     }else{
         registerForm.style.position = "relative";
         registerForm.style.top = `0px`;
