@@ -445,7 +445,7 @@ body {
     justify-content: center;
     gap: 2rem;
     border-radius: 20px;
-    padding: 2rem;
+    padding: clamp(0.5rem, 5vw, 2rem);
     position: relative;
 }
 
@@ -457,7 +457,6 @@ body {
 }
 
 .home .tasks{
-    padding-inline: 20px;
     width: 100%;
 }
 
