@@ -54,7 +54,8 @@ body {
 }
 
 .navbar .container::before,
-.dataForms::before {
+.dataForms::before,
+.home::before {
     content: "";
     position: absolute;
     top: 0;
@@ -427,4 +428,48 @@ body {
 
 .dataForms .overlay *{
     z-index: 2;
+}
+
+/* Tasks */
+
+.hero-section:has(.home) {
+    justify-content: flex-start;
+    padding-top: 1.5rem;
+}
+
+.home{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+}
+
+.home h1{
+    display: flex;
+    align-self: center;
+    justify-self: flex-start;
+    margin: 0;
+}
+
+.home .tasks{
+    padding-inline: 20px;
+    width: 100%;
+}
+
+.home .tasks .card{
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.home .tasks .card .card-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

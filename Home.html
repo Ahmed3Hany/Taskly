@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TASKLY</title>
+    <link rel="icon" href="Images/Logo.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="CSS/Styles.css">
+    <link rel="stylesheet" href="CSS/DarkModeStyles.css">
+    <link rel="stylesheet" href="CSS/KeyFrames.css">
+    <link rel="stylesheet" href="CSS/MediaQueries.css">
+</head>
+
+<body onload="heroSectionHeight()" onresize="heroSectionHeight();">
+
+    <nav class="navbar navbar-expand-sm" id="navbar">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html">
+                <img src="Images/Logo.png" alt="Logo Taskly">
+                <h1>
+                    <span>T</span>
+                    <span>A</span>
+                    <span>S</span>
+                    <span>K</span>
+                    <span>L</span>
+                    <span>Y</span>
+                </h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <div class="d-flex justify-content-center align-items-center gap-3 my-2 my-md-0">
+                    <div>
+                        <input class="visually-hidden" type="checkbox" role="switch" id="Mode">
+                        <label for="Mode" class="mode-icon"></label>
+                    </div>
+                    <div>
+                        <button onclick="window.open('Login.html', '_self')" class="loginBtn"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section text-center">
+        <div class="container">
+            <div class="home">
+                <h1>Tasks</h1>
+                <div class="tasks row g-3">
+                    <div class="col-xxl-3 col-lg-4 col-md-6">
+                        <div class="card border-primary">
+                            <div class="card-header">
+                                <h4 class="m-0">Header</h4>
+                                <button class="btn btn-close"></button>
+                            </div>
+                            <div class="card-body text-primary">
+                                <h5 class="card-title">Time Duration</h5>
+                                <h5 class="card-title">Date Duration</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit iste odio adipisci ipsum doloribus. Nulla tempora dolorum quam repudiandae quis aspernatur eius facere blanditiis maxime, deserunt vitae, corporis est labore.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-lg-4 col-md-6">
+                        <div class="card border-primary">
+                            <div class="card-header">
+                                <h4 class="m-0">Header</h4>
+                                <button class="btn btn-close"></button>
+                            </div>
+                            <div class="card-body text-primary">
+                                <h5 class="card-title">Time Duration</h5>
+                                <h5 class="card-title">Date Duration</h5>
+                                <p class="card-text">Description</p>
+                            </div>
+                        </div>
+                    </div>
+
+                        
+                </div>
+                <button id="addTask" class="btn btn-primary">Add Task</button>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        
+    </script>
+    <script src="Javascript/Scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
