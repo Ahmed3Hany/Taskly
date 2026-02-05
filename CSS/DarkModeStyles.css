@@ -19,6 +19,8 @@ body:has(#Mode:checked) .dataForms::before{
 body:has(#Mode:checked) .navbar .logo span,
 body:has(#Mode:checked) .hero-title,
 body:has(#Mode:checked) h1,
+body:has(#Mode:checked) h2,
+body:has(#Mode:checked) h3,
 body:has(#Mode:checked) h4,
 body:has(#Mode:checked) h5,
 body:has(#Mode:checked) p,
@@ -105,4 +107,20 @@ body:has(#Mode:checked) .dataForms .submitBtn:hover {
 
 body:has(#Mode:checked) .dataForms .overlay::before {
     opacity: 1;
+}
+
+body:has(#Mode:checked) .home .tasks .task{
+    background-color: var(--DarkColor1);
+}
+
+body:has(#Mode:checked) .home .tasks .task .taskNumber{
+    filter: drop-shadow(0px 0px 15px var(--LightColor1));
+}
+
+body:has(#Mode:checked) .home .tasks .task .taskNumber .shape{
+    background-color: var(--DarkColor2);
+}
+
+body:has(#Mode:checked) .home .tasks .task .taskNumber .num span{
+    background-color: var(--DarkColor3);
 }

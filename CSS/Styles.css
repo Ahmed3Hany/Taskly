@@ -461,10 +461,6 @@ body {
     width: 100%;
 }
 
-.home .tasks > div{
-    width: 100%;
-}
-
 .home .tasks .task{
     background-color: var(--LightColor3);
     border-radius: 100rem;
@@ -474,18 +470,18 @@ body {
     align-items: center;
     gap: 20px;
     overflow: hidden;
-    
+    width: 100%;
 }
 
 .home .tasks .task .taskNumber{
     display: flex;
     align-self: stretch;
-    filter: drop-shadow(10px 0px 10px black);
+    filter: drop-shadow(1px 0px 10px var(--DarkColor1));
     width: 30%;
 }
 
 .home .tasks .task .taskNumber .shape{
-    background-color: #56C1A7;
+    background-color: var(--LightColor2);
     clip-path: polygon(
         0% 0%,
         50% 0%,
@@ -498,7 +494,7 @@ body {
 }
 
 .home .tasks .task .taskNumber .num{
-    border: 2px solid #000;
+    /* border: 2px solid  var(--DarkColor1); */
     margin: 0;
     padding: 10px;
     margin-left: 10px;
@@ -506,10 +502,9 @@ body {
 }
 
 .home .tasks .task .taskNumber .num span{
-    font-size: clamp(1.25rem, 3vw, 5rem);
-    padding: clamp(0.5rem, 2vw, 1.5rem);
-    background-color: #2C5364;
-    /* box-shadow: 20px -20px 5px inset #0F2027; */
+    font-size: clamp(1.5rem, 3vw, 7rem);
+    padding: clamp(0.5rem, 3vw, 1.75rem);
+    background-color: var(--LightColor1);
     clip-path: circle();
 }
 
@@ -550,64 +545,3 @@ body {
     align-items: center;
     justify-content: center;
 }
-
-/* 
-.home .tasks .card{
-    width: 100%;
-    background-color: var(--DarkColor1);
-    height: 100%;
-}
-
-.home .tasks .card .card-body{
-    display: flex;
-    flex-wrap: wrap;
-    text-align: justify;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.home .tasks .odd{
-    background-color: var(--DarkColor1);
-    padding: 0;
-    clip-path: polygon(
-        0% 0%,
-        100% 0%,
-        80% 100%,
-        20% 100%
-    );
-}
-
-.home .tasks .even{
-    background-color: var(--DarkColor1);
-    padding: 0;
-    clip-path: polygon(
-        20% 0%,
-        80% 0%,
-        100% 100%,
-        0% 100%
-    );
-}
-
-.home .tasks > div:hover{
-    
-    clip-path: polygon(
-        0% 0%,
-        100% 0%,
-        100% 100%,
-        0% 100%
-    );
-} 
-
-.home .tasks .card .card-header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.home .tasks .card p,
-.home .tasks .card h4,
-.home .tasks .card h5{
-    color: var(--DarkColor1);
-} */

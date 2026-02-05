@@ -33,16 +33,24 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        border-radius: 20px;
     }
 
     .home .tasks .task .taskNumber{
         width: 100%;
-        filter: drop-shadow(0px 10px 10px black);
+        filter: drop-shadow(0px 5px 15px  var(--DarkColor1));
     }
     
     .home .tasks .task .taskNumber .shape{
         clip-path: none;
         justify-content: center;
+    }
+
+    .home .tasks .task .taskNumber .num{
+        border: none;
+        padding: 10px;
+        margin-left: 0px;
+        border-radius: 0rem;
     }
 
     .home .tasks .task .taskContent{

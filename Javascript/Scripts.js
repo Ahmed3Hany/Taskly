@@ -100,3 +100,85 @@ function adjustDataFormsOnResize(){
         overlay.style.right = `${overlay.offsetWidth}px`;
     }
 }
+
+// Add Task
+try{
+    const form = document.getElementById('addTaskForm')
+    const modalEl = document.getElementById("addTaskModal");
+    const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+    modalEl.addEventListener("show.bs.modal", () => {
+        form.reset();
+        form.classList.remove("was-validated");
+    });
+
+    form.addEventListener('submit', (e) => {
+        if (!form.checkValidity()) {
+            e.preventDefault();
+            e.stopPropagation();
+            form.reportValidity();
+        }
+        else{
+            e.preventDefault()
+            form.requestSubmit(); // validates + submits
+            modal.hide(); 
+            addTask(form);
+        }
+
+        form.classList.add('was-validated')
+    }, false)
+}
+catch{
+    console.log("No Form")
+}
+
+function addTask(form){
+    const tasks = document.getElementById('tasks')
+
+    let data = new FormData(form)
+    let tName = data.get('taskname').toString()
+    let dateFrom = data.get('taskdatefrom').toString()
+    let dateTo = data.get('taskdateto').toString()
+    let timeFrom = data.get('tasktimefrom').toString()
+    let timeTo = data.get('tasktimeto').toString()
+    let description = data.get('description').toString()
+
+    console.log(tName)
+    console.log(dateFrom)
+    console.log(dateTo)
+    console.log(timeFrom)
+    console.log(timeTo)
+    console.log(description)
+
+    tasks.innerHTML += `
+        <div>
+            <div class="task">
+                <div class="taskNumber">
+                    <div class="shape">
+                        <h1 class="num"><span>01</span></h1>
+                    </div>
+                </div>
+                <div class="taskContent">
+                    <div class="text">
+                        <h2 class="mb-3">${tName}</h2>
+                        <div class="mb-2">
+                            <h5>Date / Time</h5>
+                            <p>From: ${timeFrom} To: ${timeTo}</p>
+                            <p>From: ${dateFrom} To: ${dateTo}</p>
+                        </div>
+                        <div class="d-flex">
+                            <p>${description}</p>
+                        </div>
+                    </div>
+                    <div class="btns">
+                        <button class="btn btn-primary"><i class="bi bi-check2-circle"></i></button>
+                        <button class="btn btn-danger" onclick="rmTask(this);"><i class="bi bi-x-octagon"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    `
+}
+
+function rmTask(btn){
+    btn.parentElement.parentElement.parentElement.parentElement.remove()
+}
