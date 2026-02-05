@@ -18,10 +18,12 @@ body:has(#Mode:checked) .dataForms::before{
 
 body:has(#Mode:checked) .navbar .logo span,
 body:has(#Mode:checked) .hero-title,
-body:has(#Mode:checked) .dataForms h1,
-body:has(#Mode:checked) .dataForms p,
-body:has(#Mode:checked) .dataForms a,
-body:has(#Mode:checked) .dataForms form div:has(.form-switch) label
+body:has(#Mode:checked) h1,
+body:has(#Mode:checked) h4,
+body:has(#Mode:checked) h5,
+body:has(#Mode:checked) p,
+body:has(#Mode:checked) a,
+body:has(#Mode:checked) label
 {
     color: var(--OffWhite);
 }

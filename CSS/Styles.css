@@ -443,10 +443,10 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
     border-radius: 20px;
     padding: clamp(0.5rem, 5vw, 2rem);
     position: relative;
+    box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 .home h1{
@@ -454,21 +454,160 @@ body {
     align-self: center;
     justify-self: flex-start;
     margin: 0;
+    color: var(--DarkColor1);
 }
 
 .home .tasks{
     width: 100%;
 }
 
-.home .tasks .card{
-    text-align: left;
+.home .tasks > div{
     width: 100%;
-    height: 100%;
-    background-color: transparent;
 }
+
+.home .tasks .task{
+    background-color: var(--LightColor3);
+    border-radius: 100rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+    
+}
+
+.home .tasks .task .taskNumber{
+    display: flex;
+    align-self: stretch;
+    filter: drop-shadow(10px 0px 10px black);
+    width: 30%;
+}
+
+.home .tasks .task .taskNumber .shape{
+    background-color: #56C1A7;
+    clip-path: polygon(
+        0% 0%,
+        50% 0%,
+        100% 100%,
+        0% 100%
+    );
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.home .tasks .task .taskNumber .num{
+    border: 2px solid #000;
+    margin: 0;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 200rem;
+}
+
+.home .tasks .task .taskNumber .num span{
+    font-size: clamp(1.25rem, 3vw, 5rem);
+    padding: clamp(0.5rem, 2vw, 1.5rem);
+    background-color: #2C5364;
+    /* box-shadow: 20px -20px 5px inset #0F2027; */
+    clip-path: circle();
+}
+
+.home .tasks .task .taskContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+
+.home .tasks .task .taskContent .text{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    justify-content: center;
+    padding-block: 1rem;
+    width: clamp(80%, 5vw, 85%);
+}
+
+.home .tasks .task .taskContent .text *{
+    margin: 0;
+}
+
+.home .tasks .task .taskContent .btns{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    align-self: stretch;
+}
+.home .tasks .task .taskContent .btns button{
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    margin: 0;
+    border-radius: 0;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 
+.home .tasks .card{
+    width: 100%;
+    background-color: var(--DarkColor1);
+    height: 100%;
+}
+
+.home .tasks .card .card-body{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: justify;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.home .tasks .odd{
+    background-color: var(--DarkColor1);
+    padding: 0;
+    clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        80% 100%,
+        20% 100%
+    );
+}
+
+.home .tasks .even{
+    background-color: var(--DarkColor1);
+    padding: 0;
+    clip-path: polygon(
+        20% 0%,
+        80% 0%,
+        100% 100%,
+        0% 100%
+    );
+}
+
+.home .tasks > div:hover{
+    
+    clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        100% 100%,
+        0% 100%
+    );
+} 
 
 .home .tasks .card .card-header{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
+
+.home .tasks .card p,
+.home .tasks .card h4,
+.home .tasks .card h5{
+    color: var(--DarkColor1);
+} */
