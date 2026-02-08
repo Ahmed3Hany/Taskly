@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Pacifico&display=swap');
 
 :root {
-    --LightColor1: #A8E6CF;
+    --LightColor1: #a8e6cf;
     --LightColor2: #56C1A7;
     --LightColor3: #3A9D7D;
     --DarkColor1: #0F2027;
@@ -21,14 +21,13 @@
 }
 
 body {
-    background: linear-gradient(60deg, 
-        var(--LightColor1), 
-        var(--LightColor2), 
-        var(--LightColor3), 
-        var(--DarkColor1), 
-        var(--DarkColor2), 
-        var(--DarkColor3)
-    );
+    background: linear-gradient(60deg,
+            var(--LightColor1),
+            var(--LightColor2),
+            var(--LightColor3),
+            var(--DarkColor1),
+            var(--DarkColor2),
+            var(--DarkColor3));
     background-size: 300%;
     background-position: left;
     background-repeat: no-repeat;
@@ -55,7 +54,8 @@ body {
 
 .navbar .container::before,
 .dataForms::before,
-.home::before {
+.home::before,
+.modal .modal-content::before {
     content: "";
     position: absolute;
     top: 0;
@@ -64,7 +64,7 @@ body {
     height: 100%;
     border-radius: 20px;
     z-index: -1;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.2);    
 }
 
 .navbar .logo {
@@ -81,14 +81,12 @@ body {
     width: 70px;
     height: 70px;
     border-radius: 15px;
-    filter: drop-shadow(7px 7px 5px var(--LightColor2)) 
-            drop-shadow(-7px -7px 5px var(--LightColor3));
+    filter: drop-shadow(7px 7px 5px var(--LightColor2)) drop-shadow(-7px -7px 5px var(--LightColor3));
 }
 
 .navbar .logo:hover img {
     transform: scale(1.2);
-    filter: drop-shadow(7px 7px 5px var(--LightColor3)) 
-            drop-shadow(-7px -7px 5px var(--LightColor2));
+    filter: drop-shadow(7px 7px 5px var(--LightColor3)) drop-shadow(-7px -7px 5px var(--LightColor2));
 }
 
 .navbar .logo h1 {
@@ -114,18 +112,23 @@ body {
 .navbar .logo h1 span:nth-child(1) {
     animation-delay: 0s;
 }
+
 .navbar .logo h1 span:nth-child(2) {
     animation-delay: 0.2s;
 }
+
 .navbar .logo h1 span:nth-child(3) {
     animation-delay: 0.4s;
 }
+
 .navbar .logo h1 span:nth-child(4) {
     animation-delay: 0.6s;
 }
+
 .navbar .logo h1 span:nth-child(5) {
     animation-delay: 0.8s;
 }
+
 .navbar .logo h1 span:nth-child(6) {
     animation-delay: 1.0s;
 }
@@ -183,14 +186,13 @@ body {
 }
 
 .getStartedBtn {
-    background: linear-gradient(60deg, 
-        var(--LightColor1), 
-        var(--LightColor2), 
-        var(--LightColor3), 
-        var(--DarkColor1), 
-        var(--DarkColor2), 
-        var(--DarkColor3)
-    );
+    background: linear-gradient(60deg,
+            var(--LightColor1),
+            var(--LightColor2),
+            var(--LightColor3),
+            var(--DarkColor1),
+            var(--DarkColor2),
+            var(--DarkColor3));
     background-size: 300%;
     background-position: left;
     border-radius: 20px;
@@ -215,7 +217,7 @@ body {
     overflow: hidden;
 }
 
-.dataForms .showSignUp{
+.dataForms .showSignUp {
     position: absolute;
     top: -85px;
     left: 0px;
@@ -232,14 +234,12 @@ body {
     justify-content: center;
     gap: 25px;
     z-index: 3;
-    clip-path: polygon(
-        0% 10%,
-        50% 0%,
-        100% 10%,
-        100% 90%,
-        50% 100%,
-        0% 90%
-    );
+    clip-path: polygon(0% 10%,
+            50% 0%,
+            100% 10%,
+            100% 90%,
+            50% 100%,
+            0% 90%);
 }
 
 .dataForms h1 {
@@ -280,7 +280,7 @@ body {
     transform: scale(1.2);
 }
 
-.dataForms > div {
+.dataForms>div {
     padding: clamp(2rem, 3vw, 3rem) clamp(1.25rem, 5vw, 5rem);
     display: flex;
     flex-direction: column;
@@ -390,11 +390,10 @@ body {
     border-radius: 20px;
     top: 0;
     right: 0;
-    background: linear-gradient(60deg, 
-        var(--LightColor1), 
-        var(--LightColor2), 
-        var(--LightColor3)
-    );
+    background: linear-gradient(60deg,
+            var(--LightColor1),
+            var(--LightColor2),
+            var(--LightColor3));
     background-position: var(--bg-pos, right);
     height: 100%;
     width: 50%;
@@ -408,11 +407,10 @@ body {
 
 .dataForms .overlay::before {
     content: '';
-    background: linear-gradient(60deg, 
-        var(--DarkColor1), 
-        var(--DarkColor2), 
-        var(--DarkColor3)
-    );
+    background: linear-gradient(60deg,
+            var(--DarkColor1),
+            var(--DarkColor2),
+            var(--DarkColor3));
     background-size: 200%;
     background-position: var(--bg-pos, right);
     position: absolute;
@@ -426,7 +424,7 @@ body {
     transition: 0.6s ease-in-out;
 }
 
-.dataForms .overlay *{
+.dataForms .overlay * {
     z-index: 2;
 }
 
@@ -437,7 +435,7 @@ body {
     padding-top: 1.5rem;
 }
 
-.home{
+.home {
     background-color: transparent;
     display: flex;
     flex-direction: column;
@@ -449,7 +447,7 @@ body {
     box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.2);
 }
 
-.home h1{
+.home h1 {
     display: flex;
     align-self: center;
     justify-self: flex-start;
@@ -457,11 +455,11 @@ body {
     color: var(--DarkColor1);
 }
 
-.home .tasks{
+.home .tasks {
     width: 100%;
 }
 
-.home .tasks .task{
+.home .tasks .task {
     background-color: var(--LightColor3);
     border-radius: 100rem;
     display: flex;
@@ -473,27 +471,25 @@ body {
     width: 100%;
 }
 
-.home .tasks .task .taskNumber{
+.home .tasks .task .taskNumber {
     display: flex;
     align-self: stretch;
     filter: drop-shadow(1px 0px 10px var(--DarkColor1));
     width: 30%;
 }
 
-.home .tasks .task .taskNumber .shape{
+.home .tasks .task .taskNumber .shape {
     background-color: var(--LightColor2);
-    clip-path: polygon(
-        0% 0%,
-        50% 0%,
-        100% 100%,
-        0% 100%
-    );
+    clip-path: polygon(0% 0%,
+            50% 0%,
+            100% 100%,
+            0% 100%);
     display: flex;
     align-items: center;
     width: 100%;
 }
 
-.home .tasks .task .taskNumber .num{
+.home .tasks .task .taskNumber .num {
     /* border: 2px solid  var(--DarkColor1); */
     margin: 0;
     padding: 10px;
@@ -501,14 +497,14 @@ body {
     border-radius: 200rem;
 }
 
-.home .tasks .task .taskNumber .num span{
+.home .tasks .task .taskNumber .num span {
     font-size: clamp(1.5rem, 3vw, 7rem);
     padding: clamp(0.5rem, 3vw, 1.75rem);
     background-color: var(--LightColor1);
     clip-path: circle();
 }
 
-.home .tasks .task .taskContent{
+.home .tasks .task .taskContent {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -516,7 +512,7 @@ body {
     width: 70%;
 }
 
-.home .tasks .task .taskContent .text{
+.home .tasks .task .taskContent .text {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -526,17 +522,18 @@ body {
     width: clamp(80%, 5vw, 85%);
 }
 
-.home .tasks .task .taskContent .text *{
+.home .tasks .task .taskContent .text * {
     margin: 0;
 }
 
-.home .tasks .task .taskContent .btns{
+.home .tasks .task .taskContent .btns {
     display: flex;
     flex-direction: column;
     width: 20%;
     align-self: stretch;
 }
-.home .tasks .task .taskContent .btns button{
+
+.home .tasks .task .taskContent .btns button {
     font-size: clamp(1rem, 3vw, 1.5rem);
     margin: 0;
     border-radius: 0;
@@ -545,3 +542,96 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.btnAdd{
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--DarkColor1);
+}
+
+#addTaskbtn{
+    font-weight: bold;
+    font-size: 4rem;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    clip-path: circle();
+    color: var(--DarkColor1);
+    transition: 0.4s ease-in-out;
+}
+
+#addTaskbtn:hover{
+    background-color: var(--DarkColor1);
+    color: var(--OffWhite);
+}
+
+
+
+.modal .modal-content{
+    background-color: transparent;
+    position: relative;
+    border: none;
+}
+
+.modal .modal-content::before {
+    background: linear-gradient(60deg,
+        var(--LightColor1),
+        var(--LightColor2),
+        var(--LightColor3)
+    );
+    opacity: 0.8;
+}
+
+.modal .modal-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #0F2027;
+}
+
+.modal .modal-body form{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+
+.modal .modal-body form input:focus,
+.modal .modal-body form textarea:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.modal .modal-body form input,
+.modal .modal-body form span,
+.modal .modal-body form textarea {
+    border: none;
+    border-bottom: 1px solid var(--DarkColor1);
+    padding: 10px;
+    background-color: transparent;
+    font-size: 1.25rem;
+    color: var(--DarkColor1);
+    transition: 0.6s ease-in-out;
+}
+
+.modal .modal-body form input::placeholder,
+.modal .modal-body form textarea::placeholder {
+    color: var(--DarkColor1);
+    /* opacity: 0.8; */
+    transition: 0.6s ease-in-out;
+}
+
+.modal .modal-body form #taskname:focus {
+    background-color: transparent;
+}
+
+.modal .modal-footer{
+    border-top: 2px solid #0F2027;
+}
+
+

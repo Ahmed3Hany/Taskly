@@ -15,9 +15,45 @@
     <link rel="stylesheet" href="CSS/DarkModeStyles.css">
     <link rel="stylesheet" href="CSS/KeyFrames.css">
     <link rel="stylesheet" href="CSS/MediaQueries.css">
+    <link rel="stylesheet" href="CSS/Fish.css">
 </head>
 
 <body onload="heroSectionHeight()" onresize="heroSectionHeight();">
+
+    <div class="fish">
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+    </div>
+    <div class="fish">
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+        <div class="koiCoil"></div>
+    </div>
 
     <nav class="navbar navbar-expand-sm" id="navbar">
         <div class="container">
@@ -54,12 +90,16 @@
         <div class="container">
             <div class="home">
                 <!-- <h1>Tasks</h1> -->
-                <div class="tasks row g-3" id="tasks">
+                <div class="tasks" id="tasks">
                     
                     <!-- JS Add Task Here -->
 
                 </div>
-                <button id="addTask" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#addTaskModal">Add Task</button>
+                <div class="btnAdd">
+                    <button id="addTaskbtn" class="btn" data-bs-toggle="modal" data-bs-target="#addTaskModal">
+                        <i class="bi bi-plus-lg"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
@@ -71,14 +111,14 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="addTaskModalLabel">Add Task</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h1 class="modal-title" id="addTaskModalLabel">Add Task</h1>
+                    <button type="button" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
                 </div>
                 <div class="modal-body">
                     <form id="addTaskForm" class="d-flex flex-column justify-content-center gap-3" novalidate>
-                        <div class="input-group">
-                            <span class="input-group-text">Task Name:</span>
-                            <input type="text" class="form-control" name="taskname" id="taskname" required>
+                        <div>
+                            <!-- <span class="input-group-text">Task Name:</span> -->
+                            <input type="text" class="form-control" placeholder="Task Name" name="taskname" id="taskname" required>
                         </div>
                         <div>
                             <label>Date</label>
@@ -105,11 +145,12 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary" id="addTaskBtn" form="addTaskForm">Understood</button>
+                    <button type="submit" class="btn btn-primary" id="addTaskBtn" form="addTaskForm">Add</button>
                 </div>
             </div>
         </div>
     </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

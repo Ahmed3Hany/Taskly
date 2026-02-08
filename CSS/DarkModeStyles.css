@@ -25,7 +25,10 @@ body:has(#Mode:checked) h4,
 body:has(#Mode:checked) h5,
 body:has(#Mode:checked) p,
 body:has(#Mode:checked) a,
-body:has(#Mode:checked) label
+body:has(#Mode:checked) label,
+body:has(#Mode:checked) span,
+body:has(#Mode:checked) form input::placeholder,
+body:has(#Mode:checked) form textarea::placeholder
 {
     color: var(--OffWhite);
 }
@@ -123,4 +126,35 @@ body:has(#Mode:checked) .home .tasks .task .taskNumber .shape{
 
 body:has(#Mode:checked) .home .tasks .task .taskNumber .num span{
     background-color: var(--DarkColor3);
+}
+
+body:has(#Mode:checked) .btnAdd{
+    border: 2px solid var(--OffWhite);
+}
+
+body:has(#Mode:checked) #addTaskbtn{
+    background-color: transparent;
+    color: var(--OffWhite);
+}
+
+body:has(#Mode:checked) #addTaskbtn:hover{
+    background-color: var(--OffWhite);
+    color: var(--DarkColor1);
+}
+
+
+
+
+
+body:has(#Mode:checked) .modal .modal-content::before {
+    background: linear-gradient(60deg,
+        var(--DarkColor1),
+        var(--DarkColor2),
+        var(--DarkColor3)
+    );
+    opacity: 0.8;
+}
+
+body:has(#Mode:checked) #addTaskModal .btn-close {
+    filter: brightness(0) invert(1);
 }
