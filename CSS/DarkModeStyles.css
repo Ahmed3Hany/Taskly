@@ -1,5 +1,9 @@
+body:has(#Mode:checked) canvas{
+    opacity: 1;
+}
+
 body:has(#Mode:checked) {
-    background: linear-gradient(60deg, 
+    background: linear-gradient(to bottom, 
         var(--LightColor1), 
         var(--LightColor2), 
         var(--LightColor3), 
@@ -7,12 +11,14 @@ body:has(#Mode:checked) {
         var(--DarkColor2), 
         var(--DarkColor3)
     );
-    background-size: 300%;
-    background-position: right;
+    background-size: 300% 300%;
+    background-position: bottom;
 }
 
 body:has(#Mode:checked) .navbar .container::before,
-body:has(#Mode:checked) .dataForms::before{
+body:has(#Mode:checked) .dataForms::before,
+body:has(#Mode:checked) .home::before,
+body:has(#Mode:checked) .modal .modal-content::before{
     background-color: rgba(134, 134, 134, 0.1);
 }
 
@@ -27,6 +33,8 @@ body:has(#Mode:checked) p,
 body:has(#Mode:checked) a,
 body:has(#Mode:checked) label,
 body:has(#Mode:checked) span,
+body:has(#Mode:checked) form input,
+body:has(#Mode:checked) form textarea,
 body:has(#Mode:checked) form input::placeholder,
 body:has(#Mode:checked) form textarea::placeholder
 {
@@ -52,9 +60,9 @@ body:has(#Mode:checked) .hero-subtitle {
 }
 
 body:has(#Mode:checked) .getStartedBtn {
-    background: linear-gradient(60deg, var(--LightColor1), var(--LightColor2), var(--LightColor3), var(--DarkColor1), var(--DarkColor2), var(--DarkColor3));
-    background-size: 300%;
-    background-position: right;
+    background: linear-gradient(to bottom, var(--LightColor1), var(--LightColor2), var(--LightColor3), var(--DarkColor1), var(--DarkColor2), var(--DarkColor3));
+    background-size: 300% 300%;
+    background-position: bottom;
     color: var(--OffWhite);
 }
 
@@ -113,7 +121,7 @@ body:has(#Mode:checked) .dataForms .overlay::before {
 }
 
 body:has(#Mode:checked) .home .tasks .task{
-    background-color: var(--DarkColor1);
+    background-color: var(--TransparentDarkColor1);
 }
 
 body:has(#Mode:checked) .home .tasks .task .taskNumber{
@@ -142,19 +150,18 @@ body:has(#Mode:checked) #addTaskbtn:hover{
     color: var(--DarkColor1);
 }
 
-
-
-
-
 body:has(#Mode:checked) .modal .modal-content::before {
-    background: linear-gradient(60deg,
+    background: linear-gradient(to bottom,
         var(--DarkColor1),
         var(--DarkColor2),
         var(--DarkColor3)
     );
-    opacity: 0.8;
 }
 
 body:has(#Mode:checked) #addTaskModal .btn-close {
     filter: brightness(0) invert(1);
+}
+
+body:has(#Mode:checked) .moonDiv{
+    opacity: 1;
 }

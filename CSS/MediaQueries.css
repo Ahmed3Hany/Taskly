@@ -1,8 +1,4 @@
 @media (max-width:767px) {
-    body{
-        background-size: 500% !important;
-    }
-    
     .navbar .container {
         align-items: center;
         justify-content: center;
@@ -81,5 +77,10 @@
     }
     .home .tasks .task .taskContent .btns button:nth-child(2){
         justify-content: flex-start;
+    }
+
+    .moonDiv .moon{
+        width: 256px;
+        height: 256px;
     }
 }

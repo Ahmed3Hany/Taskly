@@ -6,3 +6,21 @@
         transform: translateY(-10px);
     }
 }
+
+
+@keyframes MoonAnime{
+    0%{
+        transform: translate(-30px, 30px) scale(0.9);
+        box-shadow: none;
+    }
+
+    50%{
+        transform: translateX(0px, 0px) scale(1.02);
+        box-shadow: 0 0 10px var(--OffWhite), 0 0 80px 8px var(--OffWhite);
+    }
+
+    100%{
+        transform: translate(30px, -30px) scale(0.9);
+        box-shadow: none;
+    }
+}
