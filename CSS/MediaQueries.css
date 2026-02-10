@@ -83,4 +83,12 @@
         width: 256px;
         height: 256px;
     }
+
+    .sunDiv,
+    .sun,
+    .sun span,
+    .sun:after,
+    .sun .rotate{
+        width: 15rem !important;
+    }
 }
