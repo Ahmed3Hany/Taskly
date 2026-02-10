@@ -26,53 +26,12 @@
 }
 
 .sun,
-.sun span,
 .sun:after,
 .sun .rotate {
     width: 20rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
     border: 1px solid rgba(242, 201, 97, 0.3);
-}
-
-.sun span:nth-of-type(1) {
-    transform: rotateY(12deg) rotateX(4deg);
-}
-
-.sun span:nth-of-type(2) {
-    transform: rotateY(24deg) rotateX(26deg);
-}
-
-.sun span:nth-of-type(3) {
-    transform: rotateY(3deg) rotateX(33deg);
-}
-
-.sun span:nth-of-type(4) {
-    transform: rotateY(48deg) rotateX(56deg);
-}
-
-.sun span:nth-of-type(5) {
-    transform: rotateY(90deg) rotateX(85deg);
-}
-
-.sun span:nth-of-type(6) {
-    transform: rotateY(6deg) rotateX(24deg);
-}
-
-.sun span:nth-of-type(7) {
-    transform: rotateY(91deg) rotateX(42deg);
-}
-
-.sun span:nth-of-type(8) {
-    transform: rotateY(48deg) rotateX(8deg);
-}
-
-.sun span:nth-of-type(9) {
-    transform: rotateY(135deg) rotateX(27deg);
-}
-
-.sun span:nth-of-type(10) {
-    transform: rotateY(50deg) rotateX(140deg);
 }
 
 .sun .rotate {
