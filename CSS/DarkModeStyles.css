@@ -40,7 +40,8 @@ body:has(#Mode:checked) span,
 body:has(#Mode:checked) form input,
 body:has(#Mode:checked) form textarea,
 body:has(#Mode:checked) form input::placeholder,
-body:has(#Mode:checked) form textarea::placeholder
+body:has(#Mode:checked) form textarea::placeholder,
+body:has(#Mode:checked) .modal .modal-header .cls i
 {
     color: var(--OffWhite);
 }
@@ -57,7 +58,6 @@ body:has(#Mode:checked) .loginBtn::before{
     color: var(--OffWhite);
     text-shadow: 0px 0px 10px var(--OffWhite);
 }
-
 
 body:has(#Mode:checked) .hero-subtitle {
     color: var(--DarkOffWhite);
@@ -144,14 +144,20 @@ body:has(#Mode:checked) .btnAdd{
     border: 2px solid var(--OffWhite);
 }
 
-body:has(#Mode:checked) #addTaskbtn{
+body:has(#Mode:checked) #addTaskbtn,
+body:has(#Mode:checked) .modal .modal-footer button{
     background-color: transparent;
     color: var(--OffWhite);
 }
 
-body:has(#Mode:checked) #addTaskbtn:hover{
+body:has(#Mode:checked) #addTaskbtn:hover,
+body:has(#Mode:checked) .modal .modal-footer button:hover{
     background-color: var(--OffWhite);
     color: var(--DarkColor1);
+}
+
+body:has(#Mode:checked) .modal .modal-header .cls i:hover{
+    color: var(--DarkColor3);
 }
 
 body:has(#Mode:checked) .modal .modal-content::before {

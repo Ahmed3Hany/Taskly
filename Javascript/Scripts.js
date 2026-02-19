@@ -131,6 +131,7 @@ catch{
     console.log("No Form")
 }
 
+let taskNum = 0;
 function addTask(form){
     const tasks = document.getElementById('tasks')
 
@@ -142,19 +143,12 @@ function addTask(form){
     let timeTo = data.get('tasktimeto').toString()
     let description = data.get('description').toString()
 
-    console.log(tName)
-    console.log(dateFrom)
-    console.log(dateTo)
-    console.log(timeFrom)
-    console.log(timeTo)
-    console.log(description)
-
     tasks.innerHTML += `
         <div>
             <div class="task">
                 <div class="taskNumber">
                     <div class="shape">
-                        <h1 class="num"><span>01</span></h1>
+                        <h1 class="num"><span>${++taskNum}</span></h1>
                     </div>
                 </div>
                 <div class="taskContent">

@@ -611,10 +611,14 @@ body {
     background-color: transparent;
     border: none;
     font-size: 2rem;
-    color: var(--DarkColor1);
-    transition: 0.3s !important;
 }
-.modal .modal-header .cls:hover{
+
+.modal .modal-header .cls i{
+    color: var(--DarkColor1);
+    transition: color 0.4s ease-in-out !important;
+}
+
+.modal .modal-header .cls i:hover{
     color: var(--OffWhite);
 }
 
@@ -654,4 +658,29 @@ body {
 
 .modal .modal-footer{
     border-top: 2px solid #0F2027;
+}
+
+.modal .modal-footer button{
+    background-color: transparent;
+    color: var(--DarkColor1);
+    border: 2px solid var(--DarkColor1);
+    font-size: 1.5rem;
+    margin: 0;
+    padding-inline: 20px;
+    transition: 0.4s ease-in-out;
+}
+
+.modal .modal-footer button:nth-child(1){
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.modal .modal-footer button:nth-child(2){
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.modal .modal-footer button:hover{
+    color: var(--OffWhite);
+    background-color: var(--DarkColor1);
 }
