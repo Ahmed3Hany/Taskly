@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="CSS/Addons/Moon.css" />
 </head>
 
-<body onload="heroSectionHeight()" onresize="heroSectionHeight();">
+<body onload="heroSectionHeight();" onresize="heroSectionHeight();">
     <!-- Sun Light Mode -->
     <div class="sunDiv parent-sun">
         <div class="sunDiv sun">
@@ -55,7 +55,7 @@
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <i class="bi bi-list text-white fs-1"></i>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <div class="d-flex justify-content-center align-items-center gap-3 my-2 my-md-0">
@@ -64,7 +64,8 @@
                         <label for="Mode" class="mode-icon"></label>
                     </div>
                     <div>
-                        <button onclick="window.open('Login.html', '_self')" class="loginBtn"></button>
+                        <button data-bs-toggle="offcanvas" data-bs-target="#Sidebar"
+                            aria-controls="Sidebar" class="loginBtn"></button>
                     </div>
                 </div>
             </div>
@@ -136,6 +137,36 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="Sidebar" aria-labelledby="SidebarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="SidebarLabel">Offcanvas</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images,
+                lists, etc.
+            </div>
+            <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    Dropdown button
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
 
     <!-- Bootstrap Library -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

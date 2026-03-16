@@ -119,7 +119,7 @@
 }
 
 .loginBtn::before {
-    content: "\F4DA";
+    content: "\F479";
 }
 
 .loginBtn:hover,
