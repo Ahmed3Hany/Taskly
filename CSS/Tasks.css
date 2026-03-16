@@ -1,0 +1,260 @@
+
+/* Tasks */
+
+.home::before,
+.modal .modal-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: 0.6s ease-in-out;    
+}
+
+.hero-section:has(.home) {
+    justify-content: flex-start;
+    padding-top: 1.5rem;
+}
+
+.home {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: clamp(0.5rem, 5vw, 2rem);
+    position: relative;
+    box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.home h1 {
+    display: flex;
+    align-self: center;
+    justify-self: flex-start;
+    margin: 0;
+    color: var(--DarkColor1);
+}
+
+.home .tasks {
+    width: 100%;
+}
+
+.home .tasks .task {
+    background-color: var(--TransparentLightColor3);
+    border-radius: 100rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.home .tasks .task .taskNumber {
+    display: flex;
+    align-self: stretch;
+    filter: drop-shadow(1px 0px 10px var(--DarkColor1));
+    width: 30%;
+}
+
+.home .tasks .task .taskNumber .shape {
+    background-color: var(--LightColor2);
+    clip-path: polygon(0% 0%,
+            50% 0%,
+            100% 100%,
+            0% 100%);
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.home .tasks .task .taskNumber .num {
+    /* border: 2px solid  var(--DarkColor1); */
+    margin: 0;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 200rem;
+}
+
+.home .tasks .task .taskNumber .num span {
+    font-size: clamp(1.5rem, 3vw, 7rem);
+    padding: clamp(0.5rem, 3vw, 1.75rem);
+    background-color: var(--LightColor1);
+    clip-path: circle();
+}
+
+.home .tasks .task .taskContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+
+.home .tasks .task .taskContent .text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    justify-content: center;
+    padding-block: 1rem;
+    width: clamp(80%, 5vw, 85%);
+}
+
+.home .tasks .task .taskContent .text * {
+    margin: 0;
+}
+
+.home .tasks .task .taskContent .btns {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    align-self: stretch;
+}
+
+.home .tasks .task .taskContent .btns button {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    margin: 0;
+    border-radius: 0;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnAdd{
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--DarkColor1);
+}
+
+#addTaskbtn{
+    font-weight: bold;
+    font-size: 4rem;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    clip-path: circle();
+    color: var(--DarkColor1);
+    transition: 0.4s ease-in-out;
+}
+
+#addTaskbtn:hover{
+    background-color: var(--DarkColor1);
+    color: var(--OffWhite);
+}
+
+.modal .modal-content{
+    background-color: transparent;
+    position: relative;
+    border: none;
+}
+
+.modal .modal-content::before {
+    background: linear-gradient(to bottom,
+        var(--LightColor1),
+        var(--LightColor2),
+        var(--LightColor3)
+    );
+}
+
+.modal .modal-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #0F2027;
+}
+
+.modal .modal-header h1{
+    color: var(--DarkColor1);
+}
+
+.modal .modal-header .cls{
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+}
+
+.modal .modal-header .cls i{
+    color: var(--DarkColor1);
+    transition: color 0.4s ease-in-out !important;
+}
+
+.modal .modal-header .cls i:hover{
+    color: var(--OffWhite);
+}
+
+.modal .modal-body form{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.modal .modal-body form input:focus,
+.modal .modal-body form textarea:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.modal .modal-body form input,
+.modal .modal-body form span,
+.modal .modal-body form textarea {
+    border: none;
+    border-bottom: 1px solid var(--DarkColor1);
+    padding: 10px;
+    background-color: transparent;
+    font-size: 1.25rem;
+    color: var(--DarkColor1);
+    transition: 0.6s ease-in-out;
+}
+
+.modal .modal-body form input::placeholder,
+.modal .modal-body form textarea::placeholder {
+    color: var(--DarkColor1);
+    transition: 0.6s ease-in-out;
+}
+
+.modal .modal-body form #taskname:focus {
+    background-color: transparent;
+}
+
+.modal .modal-footer{
+    border-top: 2px solid #0F2027;
+}
+
+.modal .modal-footer button{
+    background-color: transparent;
+    color: var(--DarkColor1);
+    border: 2px solid var(--DarkColor1);
+    font-size: 1.5rem;
+    margin: 0;
+    padding-inline: 20px;
+    transition: 0.4s ease-in-out;
+}
+
+.modal .modal-footer button:nth-child(1){
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.modal .modal-footer button:nth-child(2){
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.modal .modal-footer button:hover{
+    color: var(--OffWhite);
+    background-color: var(--DarkColor1);
+}

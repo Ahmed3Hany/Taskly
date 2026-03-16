@@ -1,0 +1,173 @@
+body:has(#Mode:checked) .sunDiv.parent-sun{
+    opacity: 0;
+}
+body:has(#Mode:checked) canvas,
+body:has(#Mode:checked) .moonDiv{
+    opacity: 1;
+}
+
+body:has(#Mode:checked) {
+    background: linear-gradient(to bottom, 
+        var(--LightColor3), 
+        var(--LightColor2), 
+        var(--LightColor1), 
+        var(--DarkColor1), 
+        var(--DarkColor2), 
+        var(--DarkColor3)
+    );
+    background-size: 300% 300%;
+    background-position: bottom;
+}
+
+body:has(#Mode:checked) .navbar .container::before,
+body:has(#Mode:checked) .dataForms::before,
+body:has(#Mode:checked) .home::before,
+body:has(#Mode:checked) .modal .modal-content::before{
+    background-color: rgba(134, 134, 134, 0.1);
+}
+
+body:has(#Mode:checked) .navbar .logo span,
+body:has(#Mode:checked) .hero-title,
+body:has(#Mode:checked) h1,
+body:has(#Mode:checked) h2,
+body:has(#Mode:checked) h3,
+body:has(#Mode:checked) h4,
+body:has(#Mode:checked) h5,
+body:has(#Mode:checked) p,
+body:has(#Mode:checked) a,
+body:has(#Mode:checked) label,
+body:has(#Mode:checked) span,
+body:has(#Mode:checked) form input,
+body:has(#Mode:checked) form textarea,
+body:has(#Mode:checked) form input::placeholder,
+body:has(#Mode:checked) form textarea::placeholder,
+body:has(#Mode:checked) .modal .modal-header .cls i
+{
+    color: var(--OffWhite);
+}
+
+body:has(#Mode:checked) .mode-icon::before {
+    content: "\F495";
+    background-color: var(--DarkColor1);
+    color: var(--OffWhite);
+    text-shadow: 0px 0px 10px var(--OffWhite);
+}
+
+body:has(#Mode:checked) .loginBtn::before{
+    background-color: var(--DarkColor1);
+    color: var(--OffWhite);
+    text-shadow: 0px 0px 10px var(--OffWhite);
+}
+
+body:has(#Mode:checked) .hero-subtitle {
+    color: var(--DarkOffWhite);
+}
+
+body:has(#Mode:checked) .getStartedBtn {
+    background: linear-gradient(to bottom, var(--LightColor1), var(--LightColor2), var(--LightColor3), var(--DarkColor1), var(--DarkColor2), var(--DarkColor3));
+    background-size: 300% 300%;
+    background-position: bottom;
+    color: var(--OffWhite);
+}
+
+/* Data Forms */
+
+body:has(#Mode:checked) .dataForms .showSignUp{
+    background-color: var(--DarkColor1);
+    color: var(--OffWhite);
+}
+
+body:has(#Mode:checked) .dataForms .social-links a{
+    border: 1px solid var(--OffWhite);
+}
+body:has(#Mode:checked) .dataForms .social-links a:hover{
+    background-color: var(--OffWhite);
+    color: var(--DarkColor1);
+    transform: scale(1.2);
+}
+
+body:has(#Mode:checked) .dataForms .form-control {
+    color: var(--OffWhite);
+    border-bottom: 1px solid var(--OffWhite);
+}
+
+body:has(#Mode:checked) .dataForms .form-control::placeholder {
+    color: var(--DarkOffWhite);
+}
+
+body:has(#Mode:checked) .dataForms form div:has(.form-switch) input[type="checkbox"]{
+    background-color: var(--DarkColor2);
+    border-color: var(--DarkColor2);
+}
+
+body:has(#Mode:checked) .dataForms form div:has(.form-switch) input[type="checkbox"]:checked{
+    background-color: var(--LightColor2);
+    border-color: var(--LightColor2);
+}
+
+body:has(#Mode:checked) .dataForms .submitBtn {
+    color: var(--OffWhite);
+    border-color: var(--OffWhite);
+}
+
+body:has(#Mode:checked) .dataForms .submitBtn {
+    color: var(--OffWhite);
+    border-color: var(--OffWhite);
+}
+
+body:has(#Mode:checked) .dataForms .submitBtn:hover {
+    background-color: var(--OffWhite);
+    color: var(--DarkColor1);
+}
+
+body:has(#Mode:checked) .dataForms .overlay::before {
+    opacity: 1;
+}
+
+body:has(#Mode:checked) .home .tasks .task{
+    background-color: var(--TransparentDarkColor1);
+}
+
+body:has(#Mode:checked) .home .tasks .task .taskNumber{
+    filter: drop-shadow(0px 0px 15px var(--LightColor1));
+}
+
+body:has(#Mode:checked) .home .tasks .task .taskNumber .shape{
+    background-color: var(--DarkColor2);
+}
+
+body:has(#Mode:checked) .home .tasks .task .taskNumber .num span{
+    background-color: var(--DarkColor3);
+}
+
+body:has(#Mode:checked) .btnAdd{
+    border: 2px solid var(--OffWhite);
+}
+
+body:has(#Mode:checked) #addTaskbtn,
+body:has(#Mode:checked) .modal .modal-footer button{
+    background-color: transparent;
+    color: var(--OffWhite);
+}
+
+body:has(#Mode:checked) #addTaskbtn:hover,
+body:has(#Mode:checked) .modal .modal-footer button:hover{
+    background-color: var(--OffWhite);
+    color: var(--DarkColor1);
+}
+
+body:has(#Mode:checked) .modal .modal-header .cls i:hover{
+    color: var(--DarkColor3);
+}
+
+body:has(#Mode:checked) .modal .modal-content::before {
+    background: linear-gradient(to bottom,
+        var(--DarkColor1),
+        var(--DarkColor2),
+        var(--DarkColor3)
+    );
+}
+
+body:has(#Mode:checked) #addTaskModal .btn-close {
+    filter: brightness(0) invert(1);
+}

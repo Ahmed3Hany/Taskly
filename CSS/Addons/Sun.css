@@ -1,0 +1,70 @@
+.sunDiv {
+    transform-style: preserve-3d;
+    perspective: 100rem;
+    width: 20rem;
+    aspect-ratio: 1/1;
+    margin: auto;
+}
+
+.sunDiv.parent-sun {
+    animation: move 6s linear infinite;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+}
+
+.sunDiv *,
+.sunDiv *:after,
+.sunDiv *:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+    transition: 0.6s ease-in-out;
+}
+
+.sun,
+.sun:after,
+.sun .rotate {
+    width: 20rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 1px solid rgba(242, 201, 97, 0.3);
+}
+
+.sun .rotate {
+    perspective: none;
+    animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.sun span {
+    box-shadow: 20px 0 50px rgba(242, 201, 97, 0.3);
+}
+
+.sun:after {
+    background: radial-gradient(#F2C961, #fff);
+    transform: translate3d(0, 0, 20rem) scale(0.66);
+    filter: blur(1rem);
+}
