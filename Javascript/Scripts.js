@@ -23,6 +23,7 @@ const savedState = localStorage.getItem("checkboxState");
 checkbox.checked = savedState === "true";
 // Save state when checkbox changes
 checkbox.addEventListener("change", () => {
+    document.body.style.transition = "1s ease-in-out";
     localStorage.setItem("checkboxState", checkbox.checked);
 });
 

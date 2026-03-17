@@ -28,7 +28,7 @@
     transition: 0.6s ease-in-out;    
 }
 
-.navbar .logo {
+.logo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,19 +38,19 @@
     margin: 0;
 }
 
-.navbar .logo img {
+.logo img {
     width: 70px;
     height: 70px;
     border-radius: 15px;
     filter: drop-shadow(7px 7px 5px var(--LightColor2)) drop-shadow(-7px -7px 5px var(--LightColor3));
 }
 
-.navbar .logo:hover img {
+.logo:hover img {
     transform: scale(1.2);
     filter: drop-shadow(7px 7px 5px var(--LightColor3)) drop-shadow(-7px -7px 5px var(--LightColor2));
 }
 
-.navbar .logo h1 {
+.logo h1 {
     font-size: clamp(1.5rem, 7vw, 2rem);
     font-weight: bold;
     color: var(--DarkColor1);
@@ -59,38 +59,38 @@
     gap: 0.25rem;
 }
 
-.navbar .logo:hover h1 {
+.logo:hover h1 {
     transform: scale(1.2);
 }
 
-.navbar .logo h1 span {
+.logo h1 span {
     font-family: 'Pacifico', cursive;
     display: inline-block;
     animation: wave 2s linear infinite;
     transform: translateY(10px);
 }
 
-.navbar .logo h1 span:nth-child(1) {
+.logo h1 span:nth-child(1) {
     animation-delay: 0s;
 }
 
-.navbar .logo h1 span:nth-child(2) {
+.logo h1 span:nth-child(2) {
     animation-delay: 0.2s;
 }
 
-.navbar .logo h1 span:nth-child(3) {
+.logo h1 span:nth-child(3) {
     animation-delay: 0.4s;
 }
 
-.navbar .logo h1 span:nth-child(4) {
+.logo h1 span:nth-child(4) {
     animation-delay: 0.6s;
 }
 
-.navbar .logo h1 span:nth-child(5) {
+.logo h1 span:nth-child(5) {
     animation-delay: 0.8s;
 }
 
-.navbar .logo h1 span:nth-child(6) {
+.logo h1 span:nth-child(6) {
     animation-delay: 1.0s;
 }
 

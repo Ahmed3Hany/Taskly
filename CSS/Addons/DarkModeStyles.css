@@ -171,3 +171,16 @@ body:has(#Mode:checked) .modal .modal-content::before {
 body:has(#Mode:checked) #addTaskModal .btn-close {
     filter: brightness(0) invert(1);
 }
+
+body:has(#Mode:checked) .offcanvas{
+    background: linear-gradient(to bottom, 
+        var(--LightColor3), 
+        var(--LightColor2), 
+        var(--LightColor1), 
+        var(--DarkColor1), 
+        var(--DarkColor2), 
+        var(--DarkColor3)
+    );
+    background-size: 300% 300%;
+    background-position: bottom;
+}

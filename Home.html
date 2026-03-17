@@ -42,7 +42,7 @@
 
     <nav class="navbar navbar-expand-sm" id="navbar">
         <div class="container">
-            <a class="navbar-brand logo" href="index.html">
+            <a class="navbar-brand logo" href="Home.html">
                 <img src="Images/Logo.png" alt="Logo Taskly">
                 <h1>
                     <span>T</span>
@@ -53,21 +53,9 @@
                     <span>Y</span>
                 </h1>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="bi bi-list text-white fs-1"></i>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <div class="d-flex justify-content-center align-items-center gap-3 my-2 my-md-0">
-                    <div>
-                        <input class="visually-hidden" type="checkbox" role="switch" id="Mode">
-                        <label for="Mode" class="mode-icon"></label>
-                    </div>
-                    <div>
-                        <button data-bs-toggle="offcanvas" data-bs-target="#Sidebar"
-                            aria-controls="Sidebar" class="loginBtn"></button>
-                    </div>
-                </div>
+            <div class="d-flex justify-content-center align-items-center gap-3 my-2 my-md-0">
+                <button data-bs-toggle="offcanvas" data-bs-target="#Sidebar" aria-controls="Sidebar"
+                    class="loginBtn"></button>
             </div>
         </div>
     </nav>
@@ -140,29 +128,41 @@
 
 
 
-
-
+    <!-- <div>
+        <input class="visually-hidden" type="checkbox" role="switch" id="Mode">
+        <label for="Mode" class="mode-icon"></label>
+    </div> -->
+    <!-- Sidebar -->
 
     <div class="offcanvas offcanvas-start" tabindex="-1" id="Sidebar" aria-labelledby="SidebarLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="SidebarLabel">Offcanvas</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <div class="offcanvas-header pb-0">
+            <a class="navbar-brand logo" href="Home.html">
+                <img src="Images/Logo.png" alt="Logo Taskly">
+                <h1>
+                    <span>T</span>
+                    <span>A</span>
+                    <span>S</span>
+                    <span>K</span>
+                    <span>L</span>
+                    <span>Y</span>
+                </h1>
+            </a>
+            <button type="button" class="btn-close fs-4" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <div>
-                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images,
-                lists, etc.
-            </div>
-            <div class="dropdown mt-3">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                    Dropdown button
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </div>
+            <ul class="sidebar-list">
+
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+                <li class="d-flex justify-content-between w-75">
+                    <label class="form-check-label" for="Mode">Dark Mode</label>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="Mode">
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 

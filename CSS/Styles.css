@@ -43,5 +43,28 @@ body {
     background-position: top;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    transition: none;
+}
+
+.offcanvas{
+    background: linear-gradient(to bottom,
+            var(--LightColor3),
+            var(--LightColor2),
+            var(--LightColor1),
+            var(--DarkColor1),
+            var(--DarkColor2),
+            var(--DarkColor3));
+    background-size: 300% 300%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     transition: 1s ease-in-out;
+}
+
+.sidebar-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
 }
