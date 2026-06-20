@@ -11,9 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
 // Hero Section Height Adjustment
 function heroSectionHeight() {
     const nav = document.getElementById('navbar');
+    const alert = document.getElementById('alert');
     const navHeight = nav.offsetHeight;
+    const alertHeight = alert ? alert.offsetHeight : 58;
     const heroSection = document.querySelector('.hero-section');
-    heroSection.style.minHeight = `calc(100vh - ${navHeight}px - 15px) `;
+    heroSection.style.minHeight = `calc(100vh - ${navHeight}px - 73px + ${alertHeight}px)`;
 }
 
 // Dark Mode Toggle with State Persistence

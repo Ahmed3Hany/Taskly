@@ -1,0 +1,191 @@
+<?php
+session_start();
+$user = unserialize($_SESSION['user']);
+if(empty($user)) {
+    header('Location:Login.php?msg=login_required');
+}
+
+?>
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TASKLY</title>
+    <link rel="icon" href="Images/Logo.png" />
+
+    <!-- Bootstrap Library, Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="CSS/Styles.css" />
+    <link rel="stylesheet" href="CSS/Navbar.css" />
+    <link rel="stylesheet" href="CSS/Tasks.css">
+    <link rel="stylesheet" href="CSS/Addons/DarkModeStyles.css" />
+    <link rel="stylesheet" href="CSS/Addons/KeyFrames.css" />
+    <link rel="stylesheet" href="CSS/Addons/MediaQueries.css" />
+    <link rel="stylesheet" href="CSS/Addons/Sun.css" />
+    <link rel="stylesheet" href="CSS/Addons/Moon.css" />
+</head>
+
+<body onload="heroSectionHeight();" onresize="heroSectionHeight();">
+    <!-- Sun Light Mode -->
+    <div class="sunDiv parent-sun">
+        <div class="sunDiv sun">
+            <div class="sunDiv rotate">
+            </div>
+        </div>
+    </div>
+
+    <!-- Moon Dark Mode -->
+    <div class="moonDiv">
+        <div class="moon" id="white"></div>
+    </div>
+
+    <!-- Stars Dark Mode -->
+    <canvas id="stars"></canvas>
+
+    <nav class="navbar navbar-expand-sm" id="navbar">
+        <div class="container">
+            <a class="navbar-brand logo" href="Home.php">
+                <img src="Images/Logo.png" alt="Logo Taskly">
+                <h1>
+                    <span>T</span>
+                    <span>A</span>
+                    <span>S</span>
+                    <span>K</span>
+                    <span>L</span>
+                    <span>Y</span>
+                </h1>
+            </a>
+            <div class="d-flex justify-content-center align-items-center gap-3 my-2 my-md-0">
+                <button data-bs-toggle="offcanvas" data-bs-target="#Sidebar" aria-controls="Sidebar"
+                    class="loginBtn"></button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section text-center">
+        <div class="container">
+            <div class="home">
+                <!-- <h1>Tasks</h1> -->
+                <div class="tasks" id="tasks">
+
+                    <!-- JS Add Task Here -->
+
+                </div>
+                <div class="btnAdd mt-4">
+                    <button id="addTaskbtn" class="btn" data-bs-toggle="modal" data-bs-target="#addTaskModal">
+                        <i class="bi bi-plus-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="addTaskModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="addTaskModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="addTaskModalLabel">Add Task</h1>
+                    <button type="button" class="cls" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="bi bi-x-lg"></i></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addTaskForm" class="d-flex flex-column justify-content-center gap-3" novalidate>
+                        <div>
+                            <input type="text" class="form-control" placeholder="Task Name" name="taskname"
+                                id="taskname" required>
+                        </div>
+                        <div>
+                            <label>Date</label>
+                            <div class="input-group">
+                                <span class="input-group-text">From:</span>
+                                <input type="date" class="form-control" name="taskdatefrom" id="taskdatefrom" required>
+                                <span class="input-group-text">To:</span>
+                                <input type="date" class="form-control" name="taskdateto" id="taskdateto" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label>Time</label>
+                            <div class="input-group">
+                                <span class="input-group-text">From:</span>
+                                <input type="time" class="form-control" name="tasktimefrom" id="tasktimefrom" required>
+                                <span class="input-group-text">To:</span>
+                                <input type="time" class="form-control" name="tasktimeto" id="tasktimeto" required>
+                            </div>
+                        </div>
+                        <div>
+                            <textarea name="description" id="description" placeholder="Description" class="form-control"
+                                required></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="input-group modal-footer">
+                    <button type="button" class="" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="" id="addTaskBtn" form="addTaskForm">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <div>
+        <input class="visually-hidden" type="checkbox" role="switch" id="Mode">
+        <label for="Mode" class="mode-icon"></label>
+    </div> -->
+    <!-- Sidebar -->
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="Sidebar" aria-labelledby="SidebarLabel">
+        <div class="offcanvas-header pb-0">
+            <a class="navbar-brand logo" href="Home.html">
+                <img src="Images/Logo.png" alt="Logo Taskly">
+                <h1>
+                    <span>T</span>
+                    <span>A</span>
+                    <span>S</span>
+                    <span>K</span>
+                    <span>L</span>
+                    <span>Y</span>
+                </h1>
+            </a>
+            <button type="button" class="btn-close fs-4" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="sidebar-list">
+
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="handle_logout.php">Logout</a></li>
+                <li class="d-flex justify-content-between w-75">
+                    <label class="form-check-label" for="Mode">Dark Mode</label>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="Mode">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <!-- Bootstrap Library -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!-- Js Files -->
+    <script src="Javascript/StarsBG.js"></script>
+    <script src="Javascript/Scripts.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TASKLY</title>
+  <link rel="icon" href="Images/Logo.png" />
+
+  <!-- Bootstrap Library, Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="CSS/Styles.css" />
+  <link rel="stylesheet" href="CSS/Navbar.css" />
+  <link rel="stylesheet" href="CSS/Addons/DarkModeStyles.css" />
+  <link rel="stylesheet" href="CSS/Addons/KeyFrames.css" />
+  <link rel="stylesheet" href="CSS/Addons/MediaQueries.css" />
+  <link rel="stylesheet" href="CSS/Addons/Sun.css" />
+  <link rel="stylesheet" href="CSS/Addons/Moon.css" />
+
+  <style>
+    .loginBtn::before {
+        content: "\F4DA";
+    }
+  </style>
+</head>
+
+<body onload="heroSectionHeight()" onresize="heroSectionHeight()">
+  <!-- Sun Light Mode -->
+  <div class="sunDiv parent-sun">
+      <div class="sunDiv sun">
+          <div class="sunDiv rotate">
+          </div>
+      </div>
+  </div>
+
+  <!-- Moon Dark Mode -->
+  <div class="moonDiv">
+    <div class="moon" id="white"></div>
+  </div>
+
+  <!-- Stars Dark Mode -->
+  <canvas id="stars"></canvas>
+
+  <nav class="navbar navbar-expand-sm" id="navbar">
+    <div class="container">
+      <a class="navbar-brand logo" href="index.php">
+        <img src="Images/Logo.png" alt="Logo Taskly" />
+        <h1>
+          <span>T</span>
+          <span>A</span>
+          <span>S</span>
+          <span>K</span>
+          <span>L</span>
+          <span>Y</span>
+        </h1>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list text-white fs-1"></i>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <div class="d-flex justify-content-center align-items-center gap-3 my-2 my-md-0">
+          <div>
+            <input class="visually-hidden" type="checkbox" role="switch" id="Mode" />
+            <label for="Mode" class="mode-icon"></label>
+          </div>
+          <div>
+            <button onclick="window.open('Login.html', '_self')" class="loginBtn"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-section text-center">
+    <div class="container">
+      <h1 class="hero-title">Organize Your Tasks Efficiently with TASKLY</h1>
+      <p class="hero-subtitle">
+        Boost your productivity and manage your time effectively with our
+        user-friendly task management app.
+      </p>
+      <button onclick="window.open('Login.php', '_self')" class="getStartedBtn">
+        Get Started
+      </button>
+    </div>
+  </section>
+
+  <!-- Bootstrap Library -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+  <!-- Js Files -->
+  <script src="Javascript/StarsBG.js"></script>
+  <script src="Javascript/Scripts.js"></script>
+</body>
+
+</html>
